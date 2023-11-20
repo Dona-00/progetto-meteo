@@ -27,28 +27,29 @@ function App() {
     const fetchWeatherData = async () => {
       const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=it&units=metric`;
       const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=it&units=metric`;
-
+    
       try {
         // Fetch current weather
         const currentWeatherResponse = await fetch(currentWeatherUrl);
         const currentWeatherData = await currentWeatherResponse.json();
         setCurrentWeather(currentWeatherData);
-
+    
         // Fetch 5-day forecast
         const forecastResponse = await fetch(forecastUrl);
         const forecastData = await forecastResponse.json();
-
+    
         // Process forecast data to show only 1 entry per day
         const filteredForecastData = forecastData.list.filter((item, index) => {
-          // Show only one entry per day (assuming the data is ordered chronologically)
-          return index % 8 === 0; // 8 corresponds to the data for every 24 hours (3-hour intervals)
+          // Skip the forecast for the current day and show only one entry per day
+          return index % 8 === 0 && index > 0; // 8 corresponds to the data for every 24 hours (3-hour intervals)
         });
-
+    
         setForecastData(filteredForecastData);
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
     };
+
 
     fetchWeatherData();
   }, [lat, lon, apiKey]);
