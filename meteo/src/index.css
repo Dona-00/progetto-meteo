@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', Helvetica;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p { 
+font-size: 1.5rem;
+}
+
+h1 {
+font-size: 6rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  color:white;
+}
+
+.App :before {
+  content: ' ';
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  justify-content: space-between;
+}
+
+.App .header {
+  width: 100%;
+  margin: 1rem + auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(138, 148, 238, 0.2);
+  
+}
+
+.App .footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(138, 148, 238, 0.2);
+}
+
+
+.App input {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(138, 148, 238, 0.2);
+}
+
+.App .forecast{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1rem + auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(138, 148, 238, 0.2);
+}
+
+.App .preferite{
+  width: 100%;
+  margin: 1rem + auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(138, 148, 238, 0.2);
+}
+
+.style-button {
+  margin: 5px; /* Aggiungi margine per separare i bottoni */
+  padding: 10px; /* Aggiungi spaziatura interna */
+  font-size: 14px;
+  background-color: rgba(138, 148, 238, 0.2); /* Colore di sfondo */
+  color: #fff; /* Colore del testo */
+  border: none; /* Rimuovi il bordo */
+  border-radius: 5px; /* Aggiungi angoli arrotondati */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+.style-button:hover {
+  background-color: rgba(138, 148, 238, 0.2); /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
