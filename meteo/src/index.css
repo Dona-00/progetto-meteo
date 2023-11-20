@@ -122,3 +122,7 @@ h2 {
 ::placeholder {
   color: #f8f8f8;
 }
+
+input, select, textarea{
+  color: #f8f8f8;
+}

@@ -112,3 +112,7 @@ h2 {
   background-color: rgba(138, 148, 238, 0.2); /* Cambia il colore di sfondo al passaggio del mouse */
 }
 
+input, select, textarea{
+  color: #f8f8f8;
+}
+
